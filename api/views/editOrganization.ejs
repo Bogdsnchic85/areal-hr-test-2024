@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редактировать организацию</title>
+</head>
+<body>
+    <h1>Редактировать организацию</h1>
+    <form action="/api/organizations/<%= organization.id %>" method="PUT">
+        <label for="name">Название:</label><br>
+        <input type="text" id="name" name="name" value="<%= organization.name %>"><br><br>
+        
+        <label for="comment">Комментарий:</label><br>
+        <textarea id="comment" name="comment"><%= organization.comment %></textarea><br><br>
+        
+        <button type="submit">Обновить</button>
+    </form>
+</body>
+</html>
